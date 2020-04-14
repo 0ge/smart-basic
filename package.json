@@ -1,0 +1,25 @@
+{
+    "name": "smart-basic",
+    "displayName": "smartBASIC",
+    "description": "Syntax highlighting for smartBASIC language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "smart-basic",
+            "aliases": ["smartBASIC", "smart-basic"],
+            "extensions": [".sb"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "smart-basic",
+            "scopeName": "source.smartbasic",
+            "path": "./syntaxes/smart-basic.tmLanguage.json"
+        }]
+    }
+}
