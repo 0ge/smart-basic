@@ -19,7 +19,11 @@
 				},
 				{
 					"name": "keyword.control",
-					"match": "\\b(?i)(if|then|elseif|else|endif|do|until|dowhile|for|to|next|while|endwhile|select|case|endselect|break|continue)\\b"
+					"match": "\\b(?i)(if|then|elseif|else|endif|do|until|dowhile|for|to|downto|next|while|endwhile|select|case|endselect|break|continue)\\b"
+				},
+				{
+					"name": "keyword.other",
+					"match": "\\b(?i)(#define|#include|integer.h|integer.o|integer.b|as|bp|dim|call|long|redo|step|stop|break|byref|byval|float|string|disable|integer|onerror|onevent|waitevent|throwevent|onfatalerror)\\b"
 				}
 			]
 		},
