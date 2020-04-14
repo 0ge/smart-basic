@@ -13,8 +13,9 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.smart-basic",
-					"match": "\\b(if|while|for|return)\\b"
+					"name": "comment.line.double-slash",
+					"begin": "\/\/+",
+					"end": "(?=$)"
 				}
 			]
 		},
