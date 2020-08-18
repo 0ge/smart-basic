@@ -13,6 +13,12 @@
 			"include": "#comments"
 		},
 		{
+			"include": "#events"
+		},
+		{
+			"include": "#smartbasic"
+		},
+		{
 			"include": "#functions"
 		}
 	],
@@ -46,6 +52,26 @@
 					"name": "comment.line.double-slash.smart-basic",
 					"begin": "\/\/+",
 					"end": "(?=$)"
+				}
+			]
+		},
+		"events": {
+			"patterns": [
+				{
+					"name": "support.variable",
+					"match": "\\b(?i)(evtmr0|evtmr1|evtmr2|evtmr3|evtmr4|evtmr5|evtmr6|evtmr7|evauxrx|evvsprx|evauxcts|evuartrx|evuartcts|evauxbreak|evgpiochan0|evgpiochan1|evgpiochan2|evgpiochan3|evgpiochan4|evgpiochan5|evgpiochan6|evgpiochan7|evnotifybuf|evuartbreak|evvsprxovrn|evattrnotify|evauxtxempty|evvsptxempty|evdetectchan0|evuarttxempty|evble_adv_report|evble_fast_paged|evble_adv_timeout|evble_extadvnomem|evble_conn_timeout|evble_scan_aborted|evble_scan_timeout|evble_extadvdropped|evnfc|evblemsg|evdiscon|evmsgapp|evauthval|evcharhvc|evcharval|evattrread|evauthcccd|evauthdesc|evauthsccd|evcharcccd|evchardesc|evcharsccd|evconnrssi|evdiscchar|evdiscdesc|evfindchar|evfinddesc|evattrwrite|evauthvalex|evcharvalue|evgattctout|evqspierased|evble_passkey|evdiscprimsvc|evattributemtu|evattrnotifyex|evconnparamreq|evlesckeypress|evpacketlength|evspislavetxrx|evble_extadv_end|evble_extadv_rpt|evble_extscn_rpt|evble_phy_request|evble_phy_updated|evspislaverxbufferfull|evble_ping_auth_timeout|evspislavetxbufferempty|evspislavebufferconfigured|evble_extadv_rpt_incomplete)\\b"
+				}
+			]
+		},
+		"smartbasic": {
+			"patterns": [
+				{
+					"name": "support.function",
+					"match": "\\b(?i)(strlen|getlasterror|left\\$|right\\$|mid\\$|strpos|min|max|abs|strcmp|strvaldec|strescape\\$|strescapeex\\$|strgetchr|strsetchr|strsetblock|tableinit|tableadd|tablelookup|nvrecordget|nvrecordgetex|nvrecordset|strfill|sysinfo|exitcode|strhex2bin|strsum|strxor|strhexize\\$|strdehexize\\$|strsplitleft\\$|circbufcreate|circbufwrite|circbufoverwrite|circbufread|circbufitems|sysinfo\\$|extractstrtoken|extractinttoken|nvcfgkeyget|nvcfgkeyset|timerrunning|timerioctl|uartopen|uartinfo|uartwrite|uartread|uartreadn|uartreadmatch|uartgetcts|uartcloseex|fopen|fseek|ftell|filelen|fread|freaduntil|extractfloattoken|exp|log|log10|sqrt|sin|cos|tan|asin|acos|atan|ceil|floor|fabs|fmod|isnan|isinf|isfinite|sinh|cosh|tanh|asinh|acosh|atanh|pow|round|pi|strencode8|strdecodes8|strdecodeu8|strencode16|strdecodes16|strdecodeu16|strencode24|strdecodes24|strdecodeu24|strencode32|strdecode32|strencodefloatex|strdecodefloatex|strencodesfloatex|strdecodesfloatex|strencodesfloati|strencodetimestamp|strdecodetimestamp|strencodebits|strdecodebits|strencodestring|strdecodestring|strencodefloat|strdecodefloat|qspiactiveconfigget|setpwrsupplythreshmv|systemstateset|readpwrsupplymv|erasefilesystem|sendmsgapp|verboseerr\\$|rand|randex|gettickcount|getticksince|uartioctl|blesetaddresstype|blesetaddresstypeex|blegetdevicename\\$|blegapsvcinit|bleadvrptinit|blescanrptinit|blesetcurconnparms|blegetcurconnparms|bleattrmetadata|bleattrmetadataex|blecharnew|blechardescuserdesc|blechardescprstnfrmt|blechardescadd|blecharcommit|bleservicenew|bleservicecommit|blesvcaddincludesvc|bleauthorizechar|bleauthorizedesc|blecharvaluewrite|blecharvaluenotify|blecharvalueindicate|blecharvalueread|blechardescread|bleencode8|bledecodes8|bledecodeu8|bleencode16|bledecodes16|bledecodeu16|bleencode24|bledecodes24|bledecodeu24|bleencode32|bledecode32|bleencodefloat|bledecodefloat|bleencodesfloat|bleencodesfloatex|bledecodesfloat|bleencodetimestamp|bledecodetimestamp|bleencodebits|bledecodebits|bleencodestring|bledecodestring|blehandleuuid16|blehandleuuid128|bleuuidfromhandle|blehandleuuidsibling|bleadvrptadduuid128|blegetadbyindex|blegetadbytag|bleservicechangedntfy|blegetconnhandlefromaddr|blegetaddrfromconnhandle|bleadvrptadduuid16|bleadvrptscommit|blesvcregdevinfo|bleconnmngrupdcfg|blesecmngrjustworksconf|blesecmngrkeysizes|blesecmngriocap|blesecmngrbondreq|blesecmngrlescpairingpref|blesecmngrlesckeypressenable|blesecmngrlesckeypressnotify|bleadvrptappendad|bleadvertconfig|bleadvertstart|bleadvertstop|bleauthenticate|blepair|bleencryptconnection|bletxpowerset|bletxpwrwhilepairing|blesecmngrpasskey|bleacceptpairing|bledisconnect|bleadvrptgetspace|blesvccommit|blesecmngroobkey|blesecmngroobpref|blesecmngroobavailable|blesecmngrlescownoobdataget|blesecmngrlescpeeroobdataset|blevspopen|blevspopenex|blevspinfo|blevspwrite|blevspread|blegattcopen|blediscservicefirst|blediscservicenext|bledisccharfirst|bledisccharnext|blediscdescfirst|blediscdescnext|blegattcfindchar|blegattcfinddesc|blegattcread|blegattcreaddata|blegattcwrite|blegattcwritecmd|blegattcnotifyread|bleconnectconfig|bleconnect|bleconnectcancel|blescanconfig|blescanstart|blescanflush|blescanabort|blescanstop|blescangetadvreport|blescangetpageraddr|blescangetadvreportex|blebondingstats|blebondingerasekey|blebondingeraseall|blebondingpersistkey|blebondingistrusted|blebondmngrgetinfo|blebondingadd|blebondingloadcccds|blebondingsavecccds|blewhitelistcreate|blewhitelistclear|blewhitelistaddaddr|blewhitelistaddindex|blewhitelistinfo|blewhitelistsetfilter|i2copen|i2copenex|i2cwriteread|i2cwritereg8|i2cwritereg16|i2cwritereg32|i2creadreg8|i2creadreg16|i2creadreg32|spiopen|spireadwrite|spiwrite|spiread|qspiopen|qspiclose|qspiconfigset|qspiconfigget|qspiwrite|qspiread|qspierase|qspicustomcommand|qspisetpowermode|qspiinfo|qspimemorysize|qspiisbusy|qspidpmset|qspiisdpm|qspireset|crc16generate|crc32generate|aessetkeyiv|aesencrypt|aesdecrypt|eccgeneratepubprvkeys|ecccalcsharedsecret|ecchmacsha256|gpioconfigpwm|gpiosetfunc|gpioread|gpiobindevent|gpiounbindevent|gpioassignevent|gpiounassignevent|gpiosetfuncex|bleconnrssistart|bleconnrssistop|flashopen|flashread|flashwrite|flasherase|nfchardwarestate|nfcopen|nfcfieldsense|nfcndefmsgnew|nfcndefmsgdelete|nfcndefmsgcommit|nfcndefmsggetinfo|nfcndefmsgreset|nfcndefrecaddleoob|nfcndefrecaddgeneric|blemaxpacketlengthget|blegattcattributemturequest|blegattcwriteprepare|blegattcwriteexec|blepingauthtimeout|blecharvaluewriteex|blechannelmap|spislaveopen|spislaveclose|spislavetxbufferwrite|spislaverxbufferread|spislaveconfig|auxopen|auxinfo|auxwrite|auxread|auxreadn|auxreadmatch|auxgetcts|auxcloseex|auxioctl|wdtstart|wdtreset|wdtisrunning|blephyset|bleadvsetcreate|bleadvsetnewdata|bleadvsetstart|bleadvsetstop|blescanstartex|bleextrptmetadata|bleconnectextended|bleextadvrptappendad|bleextadvrptgetspace|bleextadvrptadduuid16|bleextadvrptadduuid128|blepairingstaticpasskey)\\b"
+				},
+				{
+					"name": "support.function",
+					"match": "\\b(?i)(evtmr0|evtmr1|evtmr2|evtmr3|evtmr4|evtmr5|evtmr6|evtmr7|evauxrx|evvsprx|evauxcts|evuartrx|evuartcts|evauxbreak|evgpiochan0|evgpiochan1|evgpiochan2|evgpiochan3|evgpiochan4|evgpiochan5|evgpiochan6|evgpiochan7|evnotifybuf|evuartbreak|evvsprxovrn|evattrnotify|evauxtxempty|evvsptxempty|evdetectchan0|evuarttxempty|evble_adv_report|evble_fast_paged|evble_adv_timeout|evble_extadvnomem|evble_conn_timeout|evble_scan_aborted|evble_scan_timeout|evble_extadvdropped|evnfc|evblemsg|evdiscon|evmsgapp|evauthval|evcharhvc|evcharval|evattrread|evauthcccd|evauthdesc|evauthsccd|evcharcccd|evchardesc|evcharsccd|evconnrssi|evdiscchar|evdiscdesc|evfindchar|evfinddesc|evattrwrite|evauthvalex|evcharvalue|evgattctout|evqspierased|evble_passkey|evdiscprimsvc|evattributemtu|evattrnotifyex|evconnparamreq|evlesckeypress|evpacketlength|evspislavetxrx|evble_extadv_end|evble_extadv_rpt|evble_extscn_rpt|evble_phy_request|evble_phy_updated|evspislaverxbufferfull|evble_ping_auth_timeout|evspislavetxbufferempty|evspislavebufferconfigured|evble_extadv_rpt_incomplete)\\b"
 				}
 			]
 		},
